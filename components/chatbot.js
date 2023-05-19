@@ -52,7 +52,7 @@ function FetchResponse(props) {
 
   const getChatbotAnswer = data => {
     axios.post("/api/chatbotResponse", data).then(res => {
-      setBotAnswer(res?.data?.answer);
+      setBotAnswer(res?.data?.intent);
     });
   };
   useEffect(() => {
